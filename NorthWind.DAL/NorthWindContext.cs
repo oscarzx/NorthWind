@@ -36,7 +36,7 @@ public class NorthWindContext : DbContext
                 l =>
                 {
                     l.Property(p => p.DateTime)
-                    .HasDefaultValueSql("getDate()");
+                    .HasDefaultValueSql("getDate()");//Toma la fecha del SQL, no hay necesidad de insertarla
                     l.Property(p => p.Type)
                     .HasConversion(new EnumToStringConverter<LogType>())
                     .HasMaxLength(20);
