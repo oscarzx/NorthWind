@@ -8,7 +8,7 @@ public interface INorthWindRepository : IDisposable
     Category RetrieveCategoryByID(int categoryID);
     bool UpdateCategory(Category category);
     bool DeleteCategory(int categoryID);
-    List<Category> GetACategories();
+    List<Category> GetCategories();
     List<Log> GetLogs();
     Log CreateLog(Log log);
     int SaveChanges();
