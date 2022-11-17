@@ -1,7 +1,15 @@
+using NorthWind.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddSingleton(typeof(ICategoryOperations),
+    f => NorthWind.BLL.OperationsFactory.GetCategoryOperations());
+
+builder.Services.AddSingleton(typeof(ILogOperations),
+    f => NorthWind.BLL.OperationsFactory.GetLogOperations());
 
 var app = builder.Build();
 
