@@ -1,0 +1,4 @@
+{
+  "DataBaseProvider": "UseSqlServer",
+  "ConnectionString": "Server=DESKTOP-F99D788\\SQLEXPRESS;Database=NorthWind;Integrated Security=True;Trusted_Connection=True"
+}
